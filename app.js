@@ -23,3 +23,18 @@ function displayEntries() {
 window.onload = () => {
   displayEntries();
 };
+document.getElementById("langToggleBtn").addEventListener("click", () => {
+  const es = document.getElementById("manifesto-es");
+  const en = document.getElementById("manifesto-en");
+  const btn = document.getElementById("langToggleBtn");
+
+  if (es.style.display === "none") {
+    es.style.display = "block";
+    en.style.display = "none";
+    btn.textContent = "🌐 English version";
+  } else {
+    es.style.display = "none";
+    en.style.display = "block";
+    btn.textContent = "🌐 Versión en español";
+  }
+});
