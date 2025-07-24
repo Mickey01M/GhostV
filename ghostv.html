@@ -4,8 +4,6 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <link rel="stylesheet" href="css/style.css"/>
-<script defer src="app.js"></script>
-<script defer src="reset.js"></script>
   <title>GhostV Diario</title>
 </head>
 <body>
@@ -16,5 +14,9 @@
     <div id="entries"></div>
     <button id="resetBtn" onclick="resetEntries()">🧨 Borrar todo</button>
   </div>
+
+  <!-- Mueve los scripts al final para asegurar que el DOM esté cargado -->
+  <script defer src="app.js"></script>
+  <script defer src="reset.js"></script>
 </body>
 </html>
