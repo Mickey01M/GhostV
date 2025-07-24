@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -9,14 +9,34 @@
 <body>
   <div class="container">
     <h1>GhostV Diario</h1>
+    <p class="welcome">Bienvenida de vuelta, Golden Girl. El silencio te esperaba.</p>
     <textarea id="entry" placeholder="Escribe aquí..."></textarea>
     <button onclick="saveEntry()">Guardar entrada</button>
     <div id="entries"></div>
-    <button id="resetBtn" onclick="resetEntries()">🧨 Borrar todo</button>
+    <button onclick="resetEntries()">🧨 Borrar todo</button>
+    <button onclick="toggleManifest()">🕯️ Ver manifiesto</button>
   </div>
 
-  <!-- Mueve los scripts al final para asegurar que el DOM esté cargado -->
-  <script defer src="app.js"></script>
-  <script defer src="reset.js"></script>
+  <!-- Modal -->
+  <div id="manifestModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="toggleManifest()">&times;</span>
+      <h2>El derecho al silencio</h2>
+      <p>GhostV no es una app.<br>
+      Es un refugio para tu mente.<br>
+      Aquí nadie te observa, nadie te analiza, nadie te convierte en producto.<br><br>
+      No hay cuentas, no hay nube, no hay rastro.<br>
+      Solo tú y lo que piensas.<br><br>
+      Tu mente merece un espacio sin algoritmos.<br>
+      Donde escribir sea un acto íntimo.<br>
+      Donde el silencio sea protección, no castigo.<br><br>
+      <strong>GhostV existe porque pensar debe seguir siendo privado.</strong></p>
+    </div>
+  </div>
+
+  <script defer src="js/app.js"></script>
+  <script defer src="js/reset.js"></script>
+  <script defer src="js/modal.js"></script>
 </body>
 </html>
+
